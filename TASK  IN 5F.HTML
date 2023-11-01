@@ -1,0 +1,13 @@
+from difflib import SequenceMatcher
+
+string1 = 'one two three four'
+string2 = 'one two nine ten'
+
+match = SequenceMatcher(None, string1, string2).find_longest_match(
+    0, len(string1), 0, len(string2))
+
+print(match)  
+
+
+print(string1[match.a:match.a + match.size])
+print(string2[match.b:match.b+match.size])

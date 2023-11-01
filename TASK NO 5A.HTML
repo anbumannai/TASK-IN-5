@@ -1,0 +1,13 @@
+def Check_Vow(string, vowels):
+    final = [each for each in string if each in vowels]
+    print(len(final))
+    string = string.casefold()
+    count = {}.fromkeys(vowels, 0)
+    for character in string:
+        if character in count:
+            count[character] += 1
+        return count
+vowels = 'AEIOU'
+string = "Guvi GeeksNetworking Private Limited"
+
+print (Check_Vow(string, vowels))
